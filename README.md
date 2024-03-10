@@ -1,93 +1,38 @@
-# Plain Vanilla GitHub Pages README
-The purpose of this project is to make as easy as possible for less-technical people to create and host basic web pages for free on [GitHub Pages](https://pages.github.com/).
+# Pod Force
+Launch your personal podcast player with open-source, forever-free web tech
 
-[Check out my YouTube video on how to get started using this template](https://youtu.be/jlkHEmgQhGU)
+## About this project
 
-## Getting started
+I created Pod Force so Big Tech could no longer come between me and my favorite podcasters. While it's certainly possible and probably advisable to build a fully interactive web app to do this, I realized I could get 90% of what I needed with a static site using jekyll-import to grab the podcast content. Special thanks to ChatGPT for helping me figure out the Ruby and Javascript bits.
 
-### Copying the template and setting up publishing
+## How to use this template
+
+### Copying the template
+
 1. Press the `Use this template` button on the `Code` tab.
-1. Go to the `Settings` tab and then go to the `Pages` settings.
-1. Set the `Source` to `main` and press `Save`.
+1. Follow the instructions to name and save your repository.
 
-You'll see a URL show up, but the site takes a few minutes before it's actually live. In the meantime, try creating a page.
+### Adding subscriptions
 
-### Creating your first page
-1. Go to the `Code` tab.
-1. Press the `Add File` button and select `Create new file`.
-1. Name the page, for example, `first-page.md`. (Note the lack of spaces and the inclusion of the .md extension.)
-1. Add a title in the front matter:
-    ```
-    ---
-    title: First Page
-    ---
-    ```
-1. Add some content using [markdown](https://guides.github.com/features/mastering-markdown/) syntax. For example, you could start with a heading and paragraph like this:
-    ```
-    # First page
-    This is my first page.
-    ```
-5. Scroll down to the bottom of the page and press `Commit new file`.
+1. In the `_data` folder, update the `subscriptions.yml` file with the podcast feed links you want to subscribe to, following the format of the examples.
+1. Commit the changes.
 
-### Checking your page online
-1. On the Code tab, find and press the `Environments` link. (It may be in the right column.)
-1. On the next page (Deployments), press the `View deployment` button. (You should see the default homepage load.)
-1. In the address bar of the browser, add the name of your page _using the HTML extension_ and press return. For example: `first-page.html`. (The full address will be something like this: `https://pglevy.github.io/plain-vanilla-gh-pages/first-page.html`)
+### Updating your site with the latest episodes
 
-You should see the new page you created.
+Pod Force is set up to run on a schedule. You can also manually update and publish your site:
 
-## Next steps
-Now that you know how to create pages, here are some other things you can do:
-- Create more pages.
-- Update `index.md` (the homepage) with your own content.
-- Add links between pages so it works like a website.
-- Copy component code snippets from the [GitHub Primer design system](https://primer.style/css/components) to add more advanced functionality to your pages.
-- Customize your site language, title, and description in the `metadata.yml` file located in the `_data` folder.
+1. Go to the `Actions` tab.
+1. Go to the `Deploy Jekyll site to Pages` workflow file.
+1. Press the `Run workflow` button and give it a few minutes.
 
-## Default `body` and `main` styling classes
-- By default, the `body` element includes the `p-3` utility class from Primer. This adds some padding to the page on all sides.
-- The `main` element includes these two classes: `container-md` and `markdown-body`. The first one sets a maximum width for the content area and the second provides the default GitHub styling for Markdown content.
-- To override these, add these settings to the front matter of your content page: `body-style` and `main-style`.
+If you want to change the timing and/or frequency of the schedule:
 
-For example:
-```
-title: Home
-body-style: p-0
-main-style: container-lg
-```
+1. Read up on the "cron" syntax.
+1. Update the cron setting in this file: `.github/workflows/publish.yml`
 
-If you want to replace the defaults with nothing, do this:
-```
-title: My Page
-body-style: ""
-main-style: ""
-```
+## License and credit
+Pod Force is available for use and modification under the MIT license. It relies on the following open-source projects:
 
-## GitHub Primer CSS framework
-This projects uses a local copy of the Primer CSS to enable work locally and/or offline. Note this copy may not be the latest version because it needs to be kept up-to-date manually. Alternatively, you can use the hosted version, which always references the current version.
-
-To switch to hosted CSS, replace this line in `_layouts/default.html`:
-```
-<link rel="stylesheet" href="assets/css/primer.css">
-```
-
-with this:
-```
-<link rel="stylesheet" href="https://unpkg.com/@primer/css/dist/primer.css">
-```
-
-## Work with site preview using the GitHub Codespaces remote dev environment
-This project is configured to work with Codespaces. This allows you work on variations of the site in a remote dev environment in your browser so you can try things out without publishing directly to the live, `main` branch.
-
-To use this option, select `Open in a codespace` from the `Use this template` menu button.
-
-For more information, see the [GitHub documentation](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-from-a-template#creating-a-codespace-from-a-template-repository).
-
-## What to do if you're having problems
-- Try starting over with a new repository and follow the instructions again.
-- If it's still not working, [create an issue in the original Plain Vanilla GitHub Pages repo](https://github.com/lowcodelounge/plain-vanilla-gh-pages/issues), and I'll try to help.
-
-## Credit and license
-This project was created using the [GitHub Pages gem for Jekyll](https://github.com/github/pages-gem). It is licensed under [The Unlicense](https://github.com/pglevy/plain-vanilla-gh-pages/blob/main/LICENSE), which allows everything and promises nothing. 😎
-
-Favicon is `Soft Ice Cream` from [Twemoji](https://twemoji.twitter.com/), licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+- Jekyll
+- jekyll-import
+- Pico CSS framework
