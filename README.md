@@ -30,6 +30,13 @@ If you want to change the timing and/or frequency of the schedule:
 1. Read up on the "cron" syntax.
 1. Update the cron setting in this file: `.github/workflows/publish.yml`
 
+### Things to note
+
+- It intentionally only imports and displays a limited amount of episodes.
+- It uses browser localStorage to keep track of things like where you are in an episode and whether you've marked it as played. That means this data is specific to the device and browser you're using.
+- For some reason, Firefox does better than Chrome at handling buffering and playing back audio when the phone screen is locked, so I use Firefox. Not sure about Safari.
+- The use of "private feeds" (like Substack, for example, or other paid services) is not currently supported by the importer. But I plan on asking ChatGPT how to handle this.
+
 ## License and credit
 Pod Force is available for use and modification under the MIT license. It relies on the following open-source projects:
 
