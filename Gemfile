@@ -1,3 +1,9 @@
-source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
-gem "webrick", "~> 1.7"
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.3.3"
+gem "kramdown-parser-gfm"
+gem "webrick"
+
+gem "rss"
+gem "safe_yaml"
+gem "open-uri"
