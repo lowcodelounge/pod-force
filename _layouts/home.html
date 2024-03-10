@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<header>
+    <hgroup>
+        <h1>{{ site.data.metadata.title }}</h1>
+        <p>{{ site.data.metadata.description }}</p>
+    </hgroup>
+</header>
+<main>
+    {% for post in site.posts limit: 50 %}
+    <article>
+        <h2>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </h2>
+        <section style="display: flex;">
+            <img src="{% if post.channel_image %}{{ post.channel_image }}{% else %}{{ site.baseurl | append: '/assets/img/placeholder.jpg' }}{% endif %}"
+                alt="podcast cover" width="120" style="margin-inline-end: 0.5em;" />
+            <div>{{ post.tag }}<br>
+                <small>{{ post.date | date_to_string }}</small>
+            </div>
+        </section>
+        {{ post.content | strip_html | remove: "Your browser does not support the audio element." | truncatewords: 50 }}
+    </article>
+    {% else %}
+    <p>Your feed doesn’t appear to have any posts. Time to troubleshoot!</p>
+    {% endfor %}
+</main>

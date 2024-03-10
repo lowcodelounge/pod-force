@@ -1,1 +1,6 @@
-/* Add CSS rules to override Primer */
+/* Add CSS rules after Pico */
+
+audio {
+    width: 100%;
+    margin-bottom: var(--pico-block-spacing-vertical);
+  }

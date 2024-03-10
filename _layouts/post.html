@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<header>
+    <hgroup>
+        <h1>{{ page.title }}</h1>
+        <small>‹ <a href="{{ site.baseurl }}/" style="text-transform: uppercase;">Back</a></small>
+    </hgroup>
+</header>
+<main>
+    <article id="{{ page.slug }}">
+        <header style="display: flex;">
+            <img src="{% if page.channel_image %}{{ page.channel_image }}{% else %}{{ site.baseurl | append: '/assets/img/placeholder.jpg' }}{% endif %}"
+                alt="podcast cover" width="120" style="margin-inline-end: 0.5em;">
+            <div>{% if page.canonical_url %}<a href="{{ page.canonical_url }}" target="_blank">{{ page.tag }}</a>{%
+                else %}{{ page.tag }}{% endif %}<br>
+                <small>{{ page.date | date_to_string }}</small><br>
+                <fieldset>
+                    <label>
+                        <input name="mark-as-played" id="mark-as-played" type="checkbox" role="switch">
+                        Mark as played
+                    </label>
+                </fieldset>
+            </div>
+        </header>
+        {{ page.content }}
+    </article>
+</main>
