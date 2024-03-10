@@ -1,0 +1,24 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/jekyll
+{
+	"name": "Jekyll",
+	"image": "mcr.microsoft.com/devcontainers/jekyll:1-bullseye",
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+	// Commands
+	"waitFor": "onCreateCommand",
+	"updateContentCommand": "bundle install",
+	"postAttachCommand": {
+		"server": "bundle exec jekyll serve"
+	},
+	// Ports
+	"portsAttributes": {
+		"4000": {
+			"label": "Preview",
+			"onAutoForward": "openBrowser"
+		}
+	},
+	"forwardPorts": [
+		4000
+	]
+}

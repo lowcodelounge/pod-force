@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ site.data.metadata.lang | default: 'en' }}" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ site.data.metadata.title | default: 'Plain Vanilla GitHub Pages' }}</title>
+  <meta name="description" content="{{ site.data.metadata.description | default: 'Free, easy, low-tech website template using GitHub Pages' }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+
+  <link rel="stylesheet" href="assets/css/primer.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body class="{% if page.body-style %}{{ page.body-style }}{% else %}p-3{% endif %}">
+  <main class="{% if page.main-style %}{{ page.main-style }}{% else %}container-md markdown-body{% endif %}">
+    {{ content }}
+  </main>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
