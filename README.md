@@ -1,9 +1,6 @@
-# Pod Force
-Launch your personal podcast player with open-source, forever-free web tech
+# Got the need for feeds? Don’t let Big Tech come between you and your favorite podcasters. Launch your personal podcast player in minutes with open-source, forever-free web tech.
 
-## About this project
-
-I created Pod Force so Big Tech could no longer come between me and my favorite podcasters. While it's certainly possible and probably advisable to build a fully interactive web app to do this, I realized I could get 90% of what I needed with a static site using jekyll-import to grab the podcast content. Special thanks to ChatGPT for helping me figure out the Ruby and Javascript bits.
+**Pod Force** is a podcast player web app template anyone can use to subscribe and listen to their favorite podcasts. Simply copy the template, add your subs, and publish! The Jekyll static site generator builds a site you can take anywhere, or host right here on GitHub Pages. No authoritarian app ecosystem — just you and your pods.
 
 ## How to use this template
 
