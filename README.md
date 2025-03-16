@@ -1,3 +1,6 @@
+> [!NOTE]  
+> See the [vibe-coded V2 of this project here](https://github.com/pglevy/podcast-aggregator-v2), built from the ground up as a Python app using Replit AI.
+
 # Got the need for feeds? Don’t let Big Tech come between you and your favorite podcasters. Launch your personal podcast player in minutes with open-source, forever-free web tech.
 
 **Pod Force** is a podcast player web app template anyone can use to subscribe and listen to their favorite podcasts. Simply copy the template, add your subs, and publish! Jekyll builds a static site you can take anywhere, or host right here on GitHub Pages. No authoritarian app ecosystem — just you and your pods.
